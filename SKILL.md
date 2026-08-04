@@ -1,5 +1,5 @@
 ---
-name: leon-book-to-skill
+name: book-to-skill
 description: "将 PDF、EPUB、DOCX、HTML、Markdown、纯文本、RTF、MOBI/AZW 等书籍或文档提炼为可复用的 Agent Skill。用户要求把书、资料目录、研究材料或内部文档转成 Skill、提取框架并在后续工作中调用时使用。"
 ---
 

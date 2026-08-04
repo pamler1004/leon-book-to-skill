@@ -1,4 +1,4 @@
 interface:
   display_name: "Book to Skill Converter"
   short_description: "Turn books and docs into reusable agent skills"
-  default_prompt: "Use $leon-book-to-skill to convert this document into a structured, reusable agent skill."
+  default_prompt: "Use $book-to-skill to convert this document into a structured, reusable agent skill."

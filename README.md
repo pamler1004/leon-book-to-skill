@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/pamler1004/leon-book-to-skill/releases"><img src="https://img.shields.io/github/v/release/pamler1004/leon-book-to-skill?style=for-the-badge&color=blueviolet" alt="Latest release"></a>
+  <a href="https://github.com/pamler1004/book-to-skill/releases"><img src="https://img.shields.io/github/v/release/pamler1004/book-to-skill?style=for-the-badge&color=blueviolet" alt="Latest release"></a>
   <img src="https://img.shields.io/badge/Agent_Skills-Open_Standard-blueviolet?style=for-the-badge" alt="Agent Skills standard">
   <img src="https://img.shields.io/badge/PDF%20%E2%80%A2%20EPUB%20%E2%80%A2%20DOCX%20%E2%80%A2%20MD%20%E2%80%A2%20HTML%20%E2%80%A2%20RTF%20%E2%80%A2%20MOBI-supported-green?style=for-the-badge" alt="Formats supported">
   <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="MIT License">
@@ -37,7 +37,7 @@
 
 **How it works, in 3 steps:**
 
-1. **Point** it at a file, folder, or glob — `/leon-book-to-skill ./my-book.pdf`
+1. **Point** it at a file, folder, or glob — `/book-to-skill ./my-book.pdf`
 2. **It distills** the book into a skill — frameworks, decision rules, anti-patterns, and per-chapter files. Structure, not a summary.
 3. **Your agent loads it on demand** — ask `/my-book replication` and it reads the right chapter and answers from the real content, no hallucination.
 
@@ -62,7 +62,7 @@ Works with any host that supports the open [Agent Skills](https://github.com/age
 
 ## 📦 What it generates
 
-Running `/leon-book-to-skill your-book.pdf` (or a folder, glob, or list of files) creates a full skill in the canonical `~/.agents/skills/<slug>/` directory; Codex and Claude can consume it through their standard skill roots:
+Running `/book-to-skill your-book.pdf` (or a folder, glob, or list of files) creates a full skill in the canonical `~/.agents/skills/<slug>/` directory; Codex and Claude can consume it through their standard skill roots:
 
 | File | Purpose | Size |
 |------|---------|------|
@@ -92,7 +92,7 @@ If you re-open a document often enough to wish you'd memorized it, it's a candid
 ## 🚀 Usage
 
 ```
-/leon-book-to-skill <path-to-document-folder-or-glob>... [skill-name-slug]
+/book-to-skill <path-to-document-folder-or-glob>... [skill-name-slug]
 ```
 
 Supported document formats: PDF, EPUB, DOCX, TXT, Markdown, reStructuredText, AsciiDoc, HTML, RTF, MOBI/AZW/AZW3.
@@ -101,16 +101,16 @@ Supported document formats: PDF, EPUB, DOCX, TXT, Markdown, reStructuredText, As
 
 ```bash
 # Process several files together into a unified skill
-/leon-book-to-skill ~/papers/paper1.pdf ~/notes/export.txt unified-research
+/book-to-skill ~/papers/paper1.pdf ~/notes/export.txt unified-research
 
 # Process all supported files in a folder together
-/leon-book-to-skill ~/workspace/project-docs/ project-knowledge
+/book-to-skill ~/workspace/project-docs/ project-knowledge
 
 # Process files matching a glob pattern
-/leon-book-to-skill "~/books/*.epub" my-library
+/book-to-skill "~/books/*.epub" my-library
 
 # Update/fold new material into an existing skill folder
-/leon-book-to-skill ~/articles/new-paper.pdf ~/.agents/skills/project-knowledge
+/book-to-skill ~/articles/new-paper.pdf ~/.agents/skills/project-knowledge
 ```
 
 After the skill is created, use it like any other agent skill:
@@ -342,7 +342,7 @@ book-to-skill is built for a different job: you want to go deep on a specific to
 ## 📥 Install
 
 > **Two ways to use it, do not confuse them:**
-> - **As an agent skill** (recommended for Codex; also works in Claude Code, Copilot CLI, or Amp) → **`git clone` into your skills folder** (below). This is what gives you the `/leon-book-to-skill` command and the full convert-a-book flow.
+> - **As an agent skill** (recommended for Codex; also works in Claude Code, Copilot CLI, or Amp) → **`git clone` into your skills folder** (below). This is what gives you the `/book-to-skill` command and the full convert-a-book flow.
 > - **As a standalone CLI** (just the text extractor) → `pip install book-to-skill`, then `book-to-skill --help`. This does **not** register the agent skill; it only installs the extraction engine. See [the CLI section](#standalone-cli-pip).
 
 The skill follows the open [Agent Skills](https://github.com/agentskills/agentskills) standard, so a single install works for any compatible host.
@@ -350,22 +350,22 @@ The skill follows the open [Agent Skills](https://github.com/agentskills/agentsk
 **Codex** (recommended; canonical source):
 
 ```bash
-git clone https://github.com/pamler1004/leon-book-to-skill.git ~/.agents/skills/leon-book-to-skill
+git clone https://github.com/pamler1004/book-to-skill.git ~/.agents/skills/book-to-skill
 ```
 
 **GitHub Copilot CLI** (optional):
 
 ```bash
-git clone https://github.com/pamler1004/leon-book-to-skill.git ~/.copilot/skills/leon-book-to-skill
+git clone https://github.com/pamler1004/book-to-skill.git ~/.copilot/skills/book-to-skill
 # then, in a `copilot` session:
 /skills reload
-/skills info leon-book-to-skill
+/skills info book-to-skill
 ```
 
 Or the cross-agent path that Copilot CLI and Amp both discover:
 
 ```bash
-git clone https://github.com/pamler1004/leon-book-to-skill.git ~/.agents/skills/leon-book-to-skill
+git clone https://github.com/pamler1004/book-to-skill.git ~/.agents/skills/book-to-skill
 ```
 
 **Claude Code**:
@@ -373,28 +373,28 @@ git clone https://github.com/pamler1004/leon-book-to-skill.git ~/.agents/skills/
 Copy this into your Claude Code session:
 
 ```
-Install leon-book-to-skill: https://raw.githubusercontent.com/pamler1004/leon-book-to-skill/main/SKILL.md
+Install book-to-skill: https://raw.githubusercontent.com/pamler1004/book-to-skill/main/SKILL.md
 ```
 
 Or manually using standard `git clone` (ensures modular engine files are fetched correctly):
 
 ```bash
-git clone https://github.com/pamler1004/leon-book-to-skill.git ~/.claude/skills/leon-book-to-skill
+git clone https://github.com/pamler1004/book-to-skill.git ~/.claude/skills/book-to-skill
 ```
 
 Then in any agent session:
 
 ```bash
-/leon-book-to-skill ~/path/to/your-book.pdf
+/book-to-skill ~/path/to/your-book.pdf
 # or
-/leon-book-to-skill ~/path/to/your-book.epub
+/book-to-skill ~/path/to/your-book.epub
 ```
 
 ### Standalone CLI (pip)
 
 `pip install book-to-skill` is a **separate, optional** path. It installs only the
 text-extraction engine as a CLI, for scripting or to grab the optional extractors;
-it does **not** register the `/leon-book-to-skill` agent skill (use the `git clone` above
+it does **not** register the `/book-to-skill` agent skill (use the `git clone` above
 for that).
 
 ```bash

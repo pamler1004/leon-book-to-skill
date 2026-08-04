@@ -23,4 +23,4 @@
    ╚████╔╝ ██║██║  ██║╚██████╔╝██║███████╗██║╚██████╔╝╚█████╔╝██║  ██║ █████╔╝     ██║
     ╚═══╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝╚══════╝╚═╝ ╚═════╝  ╚════╝ ╚═╝  ╚═╝ ╚════╝      ╚═╝
 
-  leon-book-to-skill  ·  github.com/pamler1004/leon-book-to-skill
+  book-to-skill  ·  github.com/pamler1004/book-to-skill

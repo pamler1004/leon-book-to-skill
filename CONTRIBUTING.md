@@ -18,8 +18,8 @@ generation higher-signal, or the docs clearer are all welcome.
 ## Development
 
 ```bash
-git clone https://github.com/pamler1004/leon-book-to-skill.git
-cd leon-book-to-skill
+git clone https://github.com/pamler1004/book-to-skill.git
+cd book-to-skill
 python3 -m venv .venv && . .venv/bin/activate
 pip install pytest ruff
 python3 scripts/extract.py --check     # see which optional extractors you have

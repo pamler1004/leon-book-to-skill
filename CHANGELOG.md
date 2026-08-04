@@ -8,14 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Changed
-- Renamed the Codex runtime skill to `leon-book-to-skill` and made
+- Renamed the Codex runtime skill to `book-to-skill` and made
   `~/.agents/skills/` the canonical source path.
 - Split the detailed conversion specification into a reference file so the
   always-loaded `SKILL.md` stays concise.
 
 ### Documentation
 - Clarified the two install paths so they are not confused: **`git clone` into a
-  skills folder** registers the `/leon-book-to-skill` agent skill (Codex / Claude Code / Copilot
+  skills folder** registers the `/book-to-skill` agent skill (Codex / Claude Code / Copilot
   CLI / Amp), while **`pip install book-to-skill`** installs only the standalone
   extraction CLI and does not register the skill. README and the docs landing now
   show both explicitly.

@@ -12,7 +12,7 @@ Turn any book or document into a structured, on-demand agent skill — named fra
 
 [Get started](guide.md){ .md-button .md-button--primary }
 [Skill reference](skill-reference.md){ .md-button }
-[GitHub](https://github.com/pamler1004/leon-book-to-skill){ .md-button }
+[GitHub](https://github.com/pamler1004/book-to-skill){ .md-button }
 
 ---
 
@@ -55,9 +55,9 @@ Turn any book or document into a structured, on-demand agent skill — named fra
 **As an agent skill** (recommended for Codex):
 
 ```bash
-git clone https://github.com/pamler1004/leon-book-to-skill.git ~/.agents/skills/leon-book-to-skill
+git clone https://github.com/pamler1004/book-to-skill.git ~/.agents/skills/book-to-skill
 # then, in your agent session:
-/leon-book-to-skill /path/to/book.pdf [skill-name]
+/book-to-skill /path/to/book.pdf [skill-name]
 ```
 
 **As a standalone CLI** (just the text extractor, optional):

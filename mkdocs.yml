@@ -1,8 +1,8 @@
 site_name: book-to-skill
 site_description: Convert books and documents into structured, on-demand agent skills.
-site_url: https://github.com/pamler1004/leon-book-to-skill
-repo_url: https://github.com/pamler1004/leon-book-to-skill
-repo_name: pamler1004/leon-book-to-skill
+site_url: https://github.com/pamler1004/book-to-skill
+repo_url: https://github.com/pamler1004/book-to-skill
+repo_name: pamler1004/book-to-skill
 edit_uri: ""
 
 # index.md is a committed landing page. Guide (README.md) and Skill Reference

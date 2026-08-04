@@ -1,7 +1,7 @@
 # Detailed conversion workflow
 
 This reference contains the full extraction, analysis, generation, update, and
-quality rules for `leon-book-to-skill`. Read it when the core workflow below
+quality rules for `book-to-skill`. Read it when the core workflow below
 needs more detail or when handling a large or technical source.
 
 <!--
@@ -132,14 +132,14 @@ Run the extraction script, passing the input paths:
 ```bash
 SCRIPT_PATH=""
 for candidate in \
-  "$HOME/.copilot/skills/leon-book-to-skill/scripts/extract.py" \
-  "$HOME/.agents/skills/leon-book-to-skill/scripts/extract.py" \
-  "$HOME/.claude/skills/leon-book-to-skill/scripts/extract.py" \
-  ".github/skills/leon-book-to-skill/scripts/extract.py" \
-  ".claude/skills/leon-book-to-skill/scripts/extract.py" \
-  ".agents/skills/leon-book-to-skill/scripts/extract.py" \
-  "$HOME/.config/agents/skills/leon-book-to-skill/scripts/extract.py" \
-  "$HOME/.config/amp/skills/leon-book-to-skill/scripts/extract.py"
+  "$HOME/.copilot/skills/book-to-skill/scripts/extract.py" \
+  "$HOME/.agents/skills/book-to-skill/scripts/extract.py" \
+  "$HOME/.claude/skills/book-to-skill/scripts/extract.py" \
+  ".github/skills/book-to-skill/scripts/extract.py" \
+  ".claude/skills/book-to-skill/scripts/extract.py" \
+  ".agents/skills/book-to-skill/scripts/extract.py" \
+  "$HOME/.config/agents/skills/book-to-skill/scripts/extract.py" \
+  "$HOME/.config/amp/skills/book-to-skill/scripts/extract.py"
 do
   if [ -f "$candidate" ]; then
     SCRIPT_PATH="$candidate"
