@@ -62,7 +62,7 @@ Works with any host that supports the open [Agent Skills](https://github.com/age
 
 ## 📦 What it generates
 
-Running `/book-to-skill your-book.pdf` (or a folder, glob, or list of files) creates a full skill in the canonical `~/.agents/skills/<slug>/` directory; Codex and Claude can consume it through their standard skill roots:
+Running `/book-to-skill your-book.pdf` (or a folder, glob, or list of files) creates a full skill in the host's configured skills root; the examples below use `~/.agents/skills/<slug>/`, and Codex or Claude can consume it through their standard skill roots:
 
 | File | Purpose | Size |
 |------|---------|------|
@@ -194,7 +194,7 @@ scripts/extract.py <paths…> --mode <technical|text>
                │
                ▼
           Skill written to one of:
-            ~/.agents/skills/<slug>/    (canonical source / Codex)
+            ~/.agents/skills/<slug>/    (example host skills root)
             ~/.codex/skills/<slug>/    (compatibility symlink)
             ~/.claude/skills/<slug>/   (compatibility symlink)
           /tmp/book_skill_work/         🗑️  cleaned up
@@ -347,7 +347,7 @@ book-to-skill is built for a different job: you want to go deep on a specific to
 
 The skill follows the open [Agent Skills](https://github.com/agentskills/agentskills) standard, so a single install works for any compatible host.
 
-**Codex** (recommended; canonical source):
+**Codex** (recommended; host skills root example):
 
 ```bash
 git clone https://github.com/pamler1004/book-to-skill.git ~/.agents/skills/book-to-skill

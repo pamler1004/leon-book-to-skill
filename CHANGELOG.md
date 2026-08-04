@@ -8,8 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Changed
-- Renamed the Codex runtime skill to `book-to-skill` and made
-  `~/.agents/skills/` the canonical source path.
+- Clarified that the generated Skill destination is host-configured; the
+  `~/.agents/skills/` path in the examples is a compatible host root, not a
+  universal requirement.
 - Split the detailed conversion specification into a reference file so the
   always-loaded `SKILL.md` stays concise.
 

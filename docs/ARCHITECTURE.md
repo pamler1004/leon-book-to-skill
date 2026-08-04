@@ -31,8 +31,8 @@ document into clean text + metadata; the agent turns that into a structured skil
             └────────────────────────────────────────────────────────────────┘
                                    │
                                    ▼
-                <SKILLS_HOME>/<slug>/  ← canonical source for Codex:
-                  ~/.agents/skills/    canonical source / Codex runtime
+                <SKILLS_HOME>/<slug>/  ← host-configured Skill destination:
+                  ~/.agents/skills/    example host skills root
                   ~/.codex/skills/    optional compatibility symlink
                   ~/.claude/skills/   optional compatibility symlink
                   .github|.claude|.agents/skills/  project-local

@@ -24,7 +24,7 @@ description: "将 PDF、EPUB、DOCX、HTML、Markdown、纯文本、RTF、MOBI/A
 3. 使用本 Skill 自带的 `scripts/extract.py`。先运行 `python3 scripts/extract.py --check` 检查可用解析器，再按选定模式提取。
 4. 读取生成的 `metadata.json`，报告来源、页数/章节、词数和 token 估算；生成完整 Skill 前先取得用户确认。
 5. 询问用途：应用作者框架、用作者心智模型思考、查询章节，或全部。只有“查询章节”时使用 reference 深度，其余使用 study 深度。
-6. 默认在 `~/.agents/skills/<skill-name>/` 生成；Leon 自建 Skill 使用 `leon-` 前缀，并通过管理器建立 `.codex` 与 `.claude` 软链。
+6. 默认写入宿主配置的 skills root（本文示例使用 `~/.agents/skills/<skill-name>/`）；如果宿主有独立的私有源码目录，先写入源码目录，再由宿主管理器建立运行时软链。
 7. 生成精简的 `SKILL.md`、`chapters/`、`glossary.md`、`patterns.md`、`cheatsheet.md`。核心文件只放高频框架，章节细节按需加载。
 8. 运行 `quick_validate.py`、针对性测试和敏感信息检查；不要把原书、密钥、私人路径或未授权素材复制进 Skill。
 9. 报告生成文件、大小、来源和验证结果。不要自动删除输入文档，也不要未经授权覆盖既有 Skill。
