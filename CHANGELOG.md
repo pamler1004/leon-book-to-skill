@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Added a portable OpenAI Codex descriptor and structural evaluation fixtures for Skill validation.
+
 ### Changed
 - Clarified that the generated Skill destination is host-configured; the
   `~/.agents/skills/` path in the examples is a compatible host root, not a

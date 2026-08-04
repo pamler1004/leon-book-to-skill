@@ -1,0 +1,32 @@
+{
+  "skill_name": "book-to-skill",
+  "evals": [
+    {
+      "id": "book-conversion-input",
+      "prompt": "用户给出一个 PDF 文件夹，希望把资料提炼成可复用的 Agent Skill。",
+      "must": [
+        "先确认输入路径和支持的文件格式，再说明 technical/text 内容类型会影响解析器选择",
+        "在生成完整 Skill 前说明需要用户确认，并遵循精简 SKILL.md、按需加载章节的输出结构",
+        "提醒不复制原书长段落、密钥或私人路径，并说明会执行校验"
+      ],
+      "must_not": [
+        "没有输入路径时猜测文件位置或直接生成 Skill",
+        "把任务当成普通读书摘要或声称已经自动生成文件"
+      ],
+      "notes": "流程边界夹具；validator 只检查 JSON 与断言字段，不自动调用模型。"
+    },
+    {
+      "id": "book-analysis-only",
+      "prompt": "用户明确要求只分析一本书的结构，不生成 Skill 文件。",
+      "must": [
+        "只输出结构化分析、框架、原则、技术、反模式和章节信息",
+        "明确停止在分析阶段，不写入或覆盖既有 Skill 文件"
+      ],
+      "must_not": [
+        "未经确认进入完整转换或覆盖已有 Skill",
+        "把章节分析伪装成已经完成的可调用 Skill"
+      ],
+      "notes": "模式选择夹具；validator 只检查 JSON 与断言字段，不自动调用模型。"
+    }
+  ]
+}
